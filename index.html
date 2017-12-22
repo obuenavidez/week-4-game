@@ -5,13 +5,13 @@
 </head>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="crystalcss.css">
+<link rel="stylesheet" href="assets/css/crystalcss.css">
 
 
 <body class = "#wrapper">
 <div class ="container">
 	<div class = "row">
-			 <div class ="col-md-3"> <center><img src = "c3image.png" height= "75px" width="75px"/></center>
+			 <div class ="col-md-3"> <center><img src = "assets/images/c3image.png" height= "75px" width="75px"/></center>
 					
 						<h5> <center>The Objective of the Game</center></h5>
 						<hr>
@@ -31,7 +31,7 @@
 
 			<div class ="col-md-9">  
 				<div class = "row">
-			             <div class ="col-md-12"> <center><h3>C R Y S T A L <center><img src = "c4image.png" height= "30px" width="30px"/></center>  G A M E </h3></center>
+			             <div class ="col-md-12"> <center><h3>C R Y S T A L <center><img src = "assets/images/c4image.png" height= "30px" width="30px"/></center>  G A M E </h3></center>
 			             </div>
 			    </div>
 
@@ -50,20 +50,20 @@
 			    </div>
 			     <br/>
 			    <div class = "row">
-			            <div class ="col-md-3"> <img src = "c1image.jpg"/ height= "150px" width="150px" id = "c1image">
-			            	<span id="c1">0</span>
+			            <div class ="col-md-3"> <img src = "assets/images/c1image.jpg"/ height= "150px" width="150px" id = "c1image">
+			            	 
 						</div>
 
-						<div class ="col-md-3"> <img src = "c2image.png"/ height= "150px" width="150px" id = "c2image">
-							<span id="c2">0</span>
+						<div class ="col-md-3"> <img src = "assets/images/c2image.png"/ height= "150px" width="150px" id = "c2image">
+							 
 						</div>
 
-						<div class ="col-md-3"> <img src = "c3image.png"/ height= "150px" width="150px" id = "c3image">
-							<span id="c3">0</span>
+						<div class ="col-md-3"> <img src = "assets/images/c3image.png"/ height= "150px" width="150px" id = "c3image">
+							 
 						</div>
 
-						<div class ="col-md-3"> <img src = "c4image.png"/ height= "150px" width="150px" id = "c4image">
-							<span id="c4">0</span>
+						<div class ="col-md-3"> <img src = "assets/images/c4image.png"/ height= "150px" width="150px" id = "c4image">
+							 
 						</div>
 			    </div>
 
@@ -71,22 +71,22 @@
 			    <br/>
 			    <div class = "row" >
 			             
-			             <div class ="col-md-12"><h1>
+			             <div class ="col-md-12"><h3>
 			             <span   id = "UserGuess2">
-			             <center>NUMBER HERE</center>
+			             <center>YOUR CHOICE WILL APPEAR HERE</center>
 			         	</span>
-			         	</h1>
+			         	</h3>
 			             </div>
 			             
 			    </div>
 			    
 			    <br/>
 			    <div class = "row">
-			             <div class ="col-md-4"> 
-			             </div>
-			             <div class ="col-md-4" id = "gameMessage"> MESSAGE WIN OR LOSE !
-			             </div>
-			             <div class ="col-md-4"> 
+			             <div class ="col-md-12"><h3>
+			             <span   id = "gameMessage">
+			             <center>Good Luck !</center>
+			         	</span>
+			         	</h3>
 			             </div>
 			    </div>
 
@@ -251,7 +251,7 @@
 		if (UserGuessTotal === random){
 		//alert ("You Win")
 
-			$("#gameMessage").html("<b>You Win !</b>");
+			$("#gameMessage").html("<b><center>You Win !</center></b>");
 			win++
 			$("#winCounter").text(win);
 			UserGuessTotal=0;
@@ -261,7 +261,7 @@
 			
 		} else if (UserGuessTotal > random){
 
-			$("#gameMessage").html("<b>You Lose !</b>");
+			$("#gameMessage").html("<b><center>You Lose !</center></b>");
 			lose++
 			$("#loseCounter").text(lose);
 			//alert ("here");
@@ -306,16 +306,7 @@
 
 	
 
-	//document.write("aa");
 	
-
-
-
-
-
-
-
-
 
 
 </script>
