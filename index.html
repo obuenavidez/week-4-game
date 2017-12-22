@@ -1,1 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BootStrap Grid </title>
+</head>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="crystalcss.css">
+
+
+<body class = "#wrapper">
+<div class ="container">
+	<div class = "row">
+			 <div class ="col-md-3"> <center><img src = "c3image.png" height= "75px" width="75px"/></center>
+					
+						<h5> <center>The Objective of the Game</center></h5>
+						<hr>
+						
+						<li> You will be given a RANDOM NUMBER at the start of the game. </li>
+						<br/>
+						<li>There are Four(4) crystals below. By Clicking on a crystal you will
+							add a specific amount of points to your total score.</li><br/>
+						<li>You WIN the game by matching your total score to random number, you lose the game if your total score goes above the random number.</li><br/>
+						<li>The Value of each crystals is hidden from you until you click on it.</li>
+						<br/>
+						<li>Each time when the game starts, the game will change the values of each crystals.</li>
+						<hr>
+
+			</div>
+	
+
+			<div class ="col-md-9">  
+				<div class = "row">
+			             <div class ="col-md-12"> <center><h3>C R Y S T A L <center><img src = "c4image.png" height= "30px" width="30px"/></center>  G A M E </h3></center>
+			             </div>
+			    </div>
+
+			    <hr/> 
+
+
+			    <div class = "row">
+			             
+			             <div class ="col-md-12"><h1><center>RANDOM GENERATED  # :
+			             <span   id = "UserGuess">
+			             NUMBER HERE
+			         	</span>
+			         	</center></h1>
+			             </div>
+			             
+			    </div>
+			     <br/>
+			    <div class = "row">
+			            <div class ="col-md-3"> <img src = "c1image.jpg"/ height= "150px" width="150px" id = "c1image">
+			            	<span id="c1">0</span>
+						</div>
+
+						<div class ="col-md-3"> <img src = "c2image.png"/ height= "150px" width="150px" id = "c2image">
+							<span id="c2">0</span>
+						</div>
+
+						<div class ="col-md-3"> <img src = "c3image.png"/ height= "150px" width="150px" id = "c3image">
+							<span id="c3">0</span>
+						</div>
+
+						<div class ="col-md-3"> <img src = "c4image.png"/ height= "150px" width="150px" id = "c4image">
+							<span id="c4">0</span>
+						</div>
+			    </div>
+
+ 			    <br/>
+			    <br/>
+			    <div class = "row" >
+			             
+			             <div class ="col-md-12"><h1>
+			             <span   id = "UserGuess2">
+			             <center>NUMBER HERE</center>
+			         	</span>
+			         	</h1>
+			             </div>
+			             
+			    </div>
+			    
+			    <br/>
+			    <div class = "row">
+			             <div class ="col-md-4"> 
+			             </div>
+			             <div class ="col-md-4" id = "gameMessage"> MESSAGE WIN OR LOSE !
+			             </div>
+			             <div class ="col-md-4"> 
+			             </div>
+			    </div>
+
+			    		
+			    		<br/>
+
+			    <div class = "row">
+			             <div class ="col-md-6"> <center bgcolor ="#ddd"><b>WINS :<span id = "winCounter">0 </span></b> </center>
+			             </div>
+
+			            
+
+			             <div class ="col-md-6"> <center bgcolor ="#ddd"><b>LOSSES : <span id = "loseCounter">0 </span></b> </center>
+			             </div>
+			             
+			    </div>
+
+
+				
+			</div>
+						
+
+
+
+
+	</div>
+						<hr>
+						
+			<div class ="col-md-12">  
+				<div class = "row">
+			             <div class ="col-md-12"> <center><h5>COPYRIGHTED : OSCAR NorthWestern University 2017 </h5></center>
+			             </div>
+			    </div>
+	
+
+
+</div>
+
+
+
+
+ 
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+
+	var UserGuess2 = 0;
+	var UserGuessTotal = 0;
+	var win =0;
+	var lose=0;
+
+	
+	//function Restart2{
+	// generate random number for UserGuess from 19 -120
+
+	// store Random generated number into variable
+	var random = Math.floor(Math.random() * 120) + 1 ;
+
+	var randoC1 = Math.floor(Math.random() * 12) + 1;
+	var randoC2 = Math.floor(Math.random() * 12) + 1;
+	var randoC3 = Math.floor(Math.random() * 12) + 1;
+	var randoC4 = Math.floor(Math.random() * 12) + 1;
+
+
+	// assign the variable to id "UserGuess"
+	// remember to include the jquery library
+
+
+	var UserGuess = random ;
+
+	var c1 = randoC1;
+	var c2 = randoC2;
+	var c3 = randoC3;
+	var c4 = randoC4;
+
+	$("#UserGuess").text(UserGuess);
+
+	$("#c1").text(c1);
+	$("#c2").text(c2);
+	$("#c3").text(c3);
+	$("#c4").text(c4);
+
+	
+	function Restart2(){
+		//$("#gameMessage").html("<b>Game on ...</b>");
+	/*
+	var random  = 0;
+	var randoC1 = 0;	
+	var randoC2 = 0;	
+	var randoC3 = 0;	
+	var randoC4 = 0;		
+	*/
+
+	/*
+	c1 = 0;
+	c2 = 0;
+	c3 = 0;
+	c4 = 0;
+	*/
+
+
+	var random = Math.floor(Math.random() * 120) + 1 ;
+
+	var randoC1 = Math.floor(Math.random() * 12) + 1;
+	var randoC2 = Math.floor(Math.random() * 12) + 1;
+	var randoC3 = Math.floor(Math.random() * 12) + 1;
+	var randoC4 = Math.floor(Math.random() * 12) + 1;
+
+
+	// assign the variable to id "UserGuess"
+	// remember to include the jquery library
+
+
+	var UserGuess = random ;
+
+	var c1 = randoC1;
+	var c2 = randoC2;
+	var c3 = randoC3;
+	var c4 = randoC4;
+
+	$("#UserGuess").text(UserGuess);
+
+	$("#c1").text(c1);
+	$("#c2").text(c2);
+	$("#c3").text(c3);
+	$("#c4").text(c4);
+
+	$("#c1image").on("click", function() {
+		UserGuessTotalf(c1);
+	$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+
+	$("#c2image").on("click", function() {
+		UserGuessTotalf(c2);
+		$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+
+	$("#c3image").on("click", function() {
+		UserGuessTotalf(c3);
+		$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+
+	$("#c4image").on("click", function() {
+		UserGuessTotalf(c4);
+		$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+
+	
+	};
+
+	
+
+	function UserGuessTotalf(x){
+		UserGuessTotal = UserGuessTotal + x;
+		if (UserGuessTotal === random){
+		//alert ("You Win")
+
+			$("#gameMessage").html("<b>You Win !</b>");
+			win++
+			$("#winCounter").text(win);
+			UserGuessTotal=0;
+			//alert ("here");
+			Restart2();
+			
+			
+		} else if (UserGuessTotal > random){
+
+			$("#gameMessage").html("<b>You Lose !</b>");
+			lose++
+			$("#loseCounter").text(lose);
+			//alert ("here");
+			UserGuessTotal=0;
+			//setTimeout (1000*4);
+			//$("#gameMessage").html("<b> Game on !</b>");
+			
+			Restart2();
+			
+			
+		}
+		//alert ("here");
+		//Restart2();
+
+
+	}
+
+
+
+	$("#c1image").on("click", function() {
+		UserGuessTotalf(c1);
+		$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+
+	$("#c2image").on("click", function() {
+		UserGuessTotalf(c2);
+		$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+
+	$("#c3image").on("click", function() {
+		UserGuessTotalf(c3);
+		$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+
+	$("#c4image").on("click", function() {
+		UserGuessTotalf(c4);
+		$("#UserGuess2").html("<center>" + UserGuessTotal +"</center>");
+	});
+
+	
+
+	//document.write("aa");
+	
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
